@@ -1,0 +1,174 @@
+/* ==================================
+   A&V STUDIO — Ultra Fast Reader CSS
+   ================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-color: #0b0f19;
+    font-family: 'Poppins', sans-serif;
+    color: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* Header Navigation Bar */
+.reader-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: rgba(26, 34, 50, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 1000;
+}
+
+.title-container {
+    text-align: center;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.title-container h1 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f8fafc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title-container span {
+    font-size: 11px;
+    color: #64748b;
+    display: block;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: #cbd5e1;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.icon-btn:hover {
+    background: rgba(37, 99, 235, 0.2);
+    color: #38bdf8;
+}
+
+/* Main Reader Viewport */
+#readerViewport {
+    min-height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+/* Loader HUD */
+.loader-hud {
+    text-align: center;
+    padding: 120px 20px;
+    color: #94a3b8;
+}
+
+.loader-icon {
+    font-size: 42px;
+    color: #eab308;
+    margin-bottom: 16px;
+}
+
+.loader-hud h3 {
+    font-size: 18px;
+    color: #f1f5f9;
+}
+
+.loader-hud p {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 6px;
+}
+
+/* Webtoon Vertical Infinite Stream */
+.image-stream {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-stream img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background: #121824;
+    min-height: 200px;
+}
+
+/* Footer Control HUD */
+.reader-footer {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(26, 34, 50, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 12px;
+    transition: color 0.2s;
+}
+
+.nav-btn:hover {
+    color: #38bdf8;
+}
+
+.page-hud {
+    font-size: 12px;
+    font-weight: 600;
+    color: #cbd5e1;
+    min-width: 100px;
+    text-align: center;
+}

@@ -1,0 +1,350 @@
+/* ==================================
+   A&V STUDIO — Comick Premium Details Style
+   ================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #171d2a;
+    font-family: 'Poppins', sans-serif;
+    color: #94a3b8;
+    padding-top: 75px;
+    padding-bottom: 85px;
+}
+
+/* ==================================
+   1. TOP APP BAR STYLE NAVIGATION
+   ================================== */
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #171d2a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 2000;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: #cbd5e1;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.brand-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand-logo, .user-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.brand-info h2 {
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.brand-info span {
+    font-size: 9px;
+    color: #64748b;
+    display: block;
+    margin-top: 2px;
+}
+
+.pwa-badge {
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+
+/* ==================================
+   2. MAIN HERO METADATA METRICS AREA
+   ================================== */
+.details-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 14px;
+}
+
+.hero-section {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.cover-wrapper {
+    position: relative;
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.cover-wrapper img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.share-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+    border: none;
+    color: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.hero-info {
+    flex: 1;
+}
+
+.title-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+
+.meta-tags-grid {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+.meta-row {
+    color: #cbd5e1;
+}
+
+.meta-label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.flag-icon {
+    font-size: 13px;
+    margin-right: 2px;
+}
+
+.txt-blue {
+    color: #38bdf8;
+}
+
+/* Live Rating Module Layer rules */
+.rating-box {
+    margin-top: 12px;
+}
+
+.stars-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #f59e0b;
+    font-size: 15px;
+}
+
+.star-empty {
+    color: #334155;
+}
+
+.score-num {
+    color: #f8fafc;
+    font-size: 14px;
+    margin-left: 6px;
+    font-weight: 600;
+}
+
+.score-num small {
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 400;
+    margin-left: 2px;
+}
+
+.ratings-count, .your-rating {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 3px;
+}
+
+.user-star {
+    font-size: 13px;
+    color: #475569;
+    margin-left: 2px;
+}
+
+/* ==================================
+   3. CTA ACTION OPERATIONS BAR
+   ================================== */
+.cta-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+    height: 44px;
+}
+
+.btn-primary {
+    flex: 1.2;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.select-wrapper {
+    flex: 1;
+}
+
+.status-dropdown {
+    width: 100%;
+    height: 100%;
+    background: #252f42;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #38bdf8;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    outline: none;
+}
+
+.btn-icon-bg {
+    background: #252f42;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #f59e0b;
+    width: 44px;
+    height: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==================================
+   4. CONTENT & SPECIFICATIONS BLOCKS
+   ================================== */
+.section-block {
+    margin-bottom: 22px;
+    line-height: 1.6;
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+.description-text {
+    letter-spacing: 0.2px;
+}
+
+.more-info-block h3 {
+    font-size: 15px;
+    color: #f8fafc;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.info-row {
+    display: flex;
+    font-size: 12px;
+}
+
+.info-label {
+    color: #64748b;
+    width: 85px;
+    flex-shrink: 0;
+    font-weight: 500;
+}
+
+/* ==================================
+   5. FIXED BOTTOM APP NAVBAR
+   ================================== */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #171d2a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 2000;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 10px;
+    gap: 3px;
+    height: 100%;
+    width: 16%;
+}
+
+.nav-item i {
+    font-size: 16px;
+}

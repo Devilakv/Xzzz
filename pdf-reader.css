@@ -1,0 +1,189 @@
+:root {
+    --bg-darker: #0a0e17; 
+    --bg-reader: #121824; 
+    --bg-panels: #192130;
+    --accent-blue: #2575fc;
+    --border-color: #222d3f;
+    --text-light: #f1f5f9;
+    --text-dimmed: #64748b;
+    --canvas-bg: #ffffff;
+}
+
+/* Light Theme Variables Switch Class */
+body.light-theme {
+    --bg-darker: #f0f4f8;
+    --bg-reader: #e2e8f0;
+    --bg-panels: #ffffff;
+    --border-color: #cbd5e1;
+    --text-light: #0f172a;
+    --text-dimmed: #475569;
+    --canvas-bg: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-darker);
+    color: var(--text-light);
+    overflow: hidden;
+}
+
+#loadingScreen {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-darker);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid var(--bg-panels);
+    border-top: 4px solid var(--accent-blue);
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.reader-header {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background: var(--bg-panels);
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.reader-header button, .toolbar button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(128,128,128,0.08);
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.book-title {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.toolbar {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-panels);
+    filter: brightness(0.92);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 998;
+}
+
+#zoomValue {
+    font-size: 14px;
+    font-weight: 600;
+    width: 60px;
+    text-align: center;
+}
+
+#readerContainer {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    background: var(--bg-reader);
+    padding: 16px;
+}
+
+#pdfViewer {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transform-origin: top center;
+    transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.pdf-page {
+    width: 100% !important;
+    height: auto !important;
+    background: var(--canvas-bg);
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+#tocSidebar {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 300px;
+    height: 100%;
+    background: var(--bg-panels);
+    border-right: 1px solid var(--border-color);
+    z-index: 2000;
+    transition: left 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#tocSidebar.active { left: 0; }
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#pageIndicator {
+    position: fixed;
+    right: 16px;
+    bottom: 20px;
+    background: var(--accent-blue);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+@media(max-width: 768px) {
+    #tocSidebar { width: 100%; left: -100%; }
+    #tocSidebar.active { left: 0; }
+}

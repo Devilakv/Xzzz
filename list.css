@@ -1,0 +1,356 @@
+/* ==================================
+   A&V STUDIO — Premium Global Stylesheet
+   ================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121824;
+    font-family: 'Poppins', sans-serif;
+    color: #f8fafc;
+    padding: 75px 10px 80px 10px;
+}
+
+/* ==================================
+   1. FIXED TOP APP HEADER BAR
+   ================================== */
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a2232;
+    padding: 0 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 2000;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.menu-btn, .icon-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: none;
+    color: #94a3b8;
+    font-size: 16px;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-logo, .user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.brand-info h2 {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+}
+
+.brand-info span {
+    font-size: 10px;
+    color: #64748b;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-top: 1px;
+}
+
+.pwa-badge {
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+/* ==================================
+   2. FILTER & LIST MATRIX
+   ================================== */
+.list-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    background: #1a2232;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.filter-bar input, .filter-bar select {
+    background: #121824;
+    border: 1px solid #2a3447;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #f1f5f9;
+    font-size: 12px;
+    outline: none;
+}
+
+.filter-bar input {
+    flex: 2;
+    min-width: 120px;
+}
+
+.filter-bar select {
+    flex: 1;
+    min-width: 90px;
+}
+
+/* Desktop Grid View Architecture */
+.library-header-row {
+    display: grid;
+    grid-template-columns: 2fr 0.8fr 0.8fr 1fr 1fr 1.2fr 0.4fr;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.library-row {
+    display: grid;
+    grid-template-columns: 2fr 0.8fr 0.8fr 1fr 1fr 1.2fr 0.4fr;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+    background: #1a2232;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.flex-align {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.library-cover {
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.library-cover img {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.library-details h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.library-details p {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 1px;
+}
+
+.tag-cat {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 9px;
+    margin-left: 4px;
+    display: inline-block;
+}
+
+/* Component Pills */
+.progress-pill {
+    background: #121824;
+    border: 1px solid #2a3447;
+    color: #94a3b8;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+}
+
+.txt-green { color: #10b981; }
+
+.rating-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #121824;
+    border: 1px solid #2a3447;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    color: #e2e8f0;
+    width: 100%;
+}
+
+.score-arrow { font-size: 8px; color: #64748b; margin-left: 4px; }
+
+/* Status Badges - Includes all dropdown options */
+.status-pill {
+    display: block;
+    padding: 6px 4px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+.status-reading { background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2); }
+.status-plan-to-read { background: rgba(59, 130, 246, 0.1); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2); }
+.status-completed { background: rgba(168, 85, 247, 0.1); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.2); }
+.status-on-hold { background: rgba(245, 158, 11, 0.1); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.2); }
+.status-dropped { background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); }
+
+.pub-text { font-size: 11px; color: #cbd5e1; text-align: center; }
+
+.col-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    font-size: 11px;
+    color: #64748b;
+    gap: 4px;
+}
+
+.fav-btn-action { 
+    background: none; 
+    border: none; 
+    font-size: 15px; 
+    cursor: pointer; 
+    color: #ef4444; 
+    width: 100%; 
+}
+
+.empty-msg {
+    text-align: center;
+    padding: 50px 20px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* ==================================
+   3. FIXED BOTTOM NAVIGATION BAR
+   ================================== */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #1a2232;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 2000;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 10px;
+    gap: 3px;
+    width: 16%;
+    height: 100%;
+    transition: color 0.15s ease;
+}
+
+.nav-item i { 
+    font-size: 16px; 
+}
+
+.nav-item.active {
+    color: #2563eb;
+}
+
+/* ==================================
+   4. MOBILE VIEWPORT REALIGNMENT FIX
+   ================================== */
+@media (max-width: 768px) {
+    .library-header-row {
+        display: none !important;
+    }
+    
+    .library-row {
+        grid-template-columns: 1fr 1fr 0.4fr;
+        gap: 10px 8px;
+        padding: 14px;
+    }
+    
+    .col-title {
+        grid-column: 1 / -1;
+    }
+    
+    .col-continue, .col-rating, .col-status {
+        width: 100%;
+    }
+
+    .col-pub {
+        grid-column: 1 / 3;
+    }
+
+    .pub-text {
+        text-align: left;
+    }
+    
+    .col-meta {
+        grid-column: 1 / 3;
+        grid-template-columns: repeat(3, auto);
+        justify-content: start;
+        text-align: left;
+        gap: 12px;
+        color: #64748b;
+    }
+    
+    .col-action {
+        grid-column: 3;
+        text-align: right;
+    }
+}
