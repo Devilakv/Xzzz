@@ -1,6 +1,6 @@
 /**
  * A&V STUDIO — Progressive Ultra-Fast CBZ Stream Reader Runtime
- * Optimized for instant mobile rendering and background unzipping.
+ * Optimized for instant mobile rendering, background unzipping, and global chapter navigation.
  */
 
 class CBZReaderEngine {
@@ -12,8 +12,13 @@ class CBZReaderEngine {
         this.pageProgress = document.getElementById("pageProgress");
         this.filePicker = document.getElementById("filePicker");
         this.btnBack = document.getElementById("btnBack");
+        
+        // Navigation buttons components
+        this.prevChapBtn = document.getElementById("prevChapBtn");
+        this.nextChapBtn = document.getElementById("nextChapBtn");
 
         this.objectUrls = []; 
+        this.currentBookData = null;
     }
 
     init() {
@@ -24,7 +29,7 @@ class CBZReaderEngine {
     setupEventListeners() {
         if (this.btnBack) {
             this.btnBack.addEventListener("click", () => {
-                window.location.href = "index.html";
+                window.location.href = "details.html";
             });
         }
 
@@ -34,9 +39,21 @@ class CBZReaderEngine {
                 if (file) {
                     this.mangaTitle.textContent = file.name.replace(/\.[^/.]+$/, "");
                     this.chapterLabel.textContent = "Local Archive File";
+                    
+                    // Lock down navigational controls if reading an independent local file instance
+                    if (this.prevChapBtn) this.prevChapBtn.disabled = true;
+                    if (this.nextChapBtn) this.nextChapBtn.disabled = true;
+
                     this.processCBZBuffer(file);
                 }
             });
+        }
+
+        if (this.prevChapBtn) {
+            this.prevChapBtn.addEventListener("click", () => this.navigateChapter(-1));
+        }
+        if (this.nextChapBtn) {
+            this.nextChapBtn.addEventListener("click", () => this.navigateChapter(1));
         }
 
         window.addEventListener("scroll", () => this.updatePageProgressOnScroll(), { passive: true });
@@ -46,15 +63,16 @@ class CBZReaderEngine {
         const urlParams = new URLSearchParams(window.location.search);
         let cbzUrl = urlParams.get("file");
 
-        let storedBook = null;
         try {
-            storedBook = JSON.parse(localStorage.getItem("akv-current-book"));
-        } catch (e) {}
+            this.currentBookData = JSON.parse(localStorage.getItem("akv-current-book"));
+        } catch (e) { console.error("[Cache Load Error]:", e); }
 
-        if (storedBook) {
-            this.mangaTitle.textContent = storedBook.title || "Manhwa Stream";
-            this.chapterLabel.textContent = storedBook.chapter || "Active Chapter";
-            if (!cbzUrl) cbzUrl = storedBook.url;
+        if (this.currentBookData) {
+            this.mangaTitle.textContent = this.currentBookData.title || "Manhwa Stream";
+            this.chapterLabel.textContent = this.currentBookData.currentChapter || this.currentBookData.chapter || "Active Chapter";
+            if (!cbzUrl) cbzUrl = this.currentBookData.documentUrl || this.currentBookData.url;
+            
+            this.updateChapterButtonStates();
         }
 
         if (cbzUrl) {
@@ -64,7 +82,51 @@ class CBZReaderEngine {
             await this.fetchAndProcessRemoteCBZ(cbzUrl);
         } else {
             this.updateLoaderStatus("fa-folder-open", "No File Loaded", "Tap the folder icon above to load a local .cbz file.");
+            if (this.prevChapBtn) this.prevChapBtn.disabled = true;
+            if (this.nextChapBtn) this.nextChapBtn.disabled = true;
         }
+    }
+
+    updateChapterButtonStates() {
+        if (!this.currentBookData) return;
+
+        // Isolate numerical pointers safely from tracked strings
+        const currentChapText = this.currentBookData.currentChapter || "Chap 1";
+        const currentNum = parseInt(currentChapText.replace(/[^\d]/g, ""), 10) || 1;
+        
+        const rawTotal = this.currentBookData.totalChapters || this.currentBookData.chapters || "96";
+        const totalNum = parseInt(String(rawTotal).replace(/[^\d]/g, ""), 10) || 1;
+
+        // Apply state blocks conditionally to match boundary metrics safely
+        if (this.prevChapBtn) this.prevChapBtn.disabled = (currentNum <= 1);
+        if (this.nextChapBtn) this.nextChapBtn.disabled = (currentNum >= totalNum);
+    }
+
+    async navigateChapter(direction) {
+        if (!this.currentBookData) return;
+
+        const currentChapText = this.currentBookData.currentChapter || "Chap 1";
+        let currentNum = parseInt(currentChapText.replace(/[^\d]/g, ""), 10) || 1;
+        const targetNum = currentNum + direction;
+
+        const rawTotal = this.currentBookData.totalChapters || this.currentBookData.chapters || "96";
+        const totalNum = parseInt(String(rawTotal).replace(/[^\d]/g, ""), 10) || 1;
+
+        if (targetNum < 1 || targetNum > totalNum) return;
+
+        // Mutate target state references values smoothly
+        this.currentBookData.currentChapter = `Chap ${targetNum}`;
+
+        // Swap target reference string locations against indexing paths matches mapped in JSON arrays
+        if (this.currentBookData.chapterLinks && this.currentBookData.chapterLinks[targetNum]) {
+            this.currentBookData.documentUrl = this.currentBookData.chapterLinks[targetNum];
+        } else {
+            this.currentBookData.documentUrl = this.currentBookData.url; 
+        }
+
+        // Save progress tracking snapshot instantly to hardware states before refreshing tracking threads
+        localStorage.setItem("akv-current-book", JSON.stringify(this.currentBookData));
+        window.location.reload();
     }
 
     async fetchAndProcessRemoteCBZ(url) {
