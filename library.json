@@ -13,21 +13,21 @@
     "publicationStatus": "Cancelled",
     "translationStatus": "Completed",
     "rating": "9.8",
-    "ratingCount": "1",
+    "ratingCount": "0",
     "chapter": "Chap 96",
     "currentChapter": "Chap 96",
     "totalChapters": "96",
-    "documentUrl": "https://files.catbox.moe/br57ql.cbz",
+    "documentUrl": "https://m.ac.qq.com/comic/index/id/637624",
     "lastRead": "1m",
     "updated": "2h",
     "added": "6mo",
-    "metrics": { "comments": 425, "likes": 1840 },
+    "metrics": { "comments": 0, "likes": 0 },
     "description": "A mountain of corpses, a sea of blood. At the summit, only two people remained.\n\nThis is the story of Fang Yuan as he uses the Spring Autumn Cicada to rebirth back 500 years into his past to change his destiny, defy the heavens, and tread a dark path toward absolute immortality.",
     "chapters": [
-      { "chap": 96, "isEnd": true, "entries": [{ "upvotes": 280, "time": "1 month", "group": "A&V STUDIO", "url": "https://files.catbox.moe/br57ql.cbz", "type": "CBZ" }] },
-      { "chap": 95, "isEnd": false, "entries": [{ "upvotes": 220, "time": "2 months", "group": "A&V STUDIO", "url": "https://files.catbox.moe/br57ql.cbz", "type": "CBZ" }] },
-      { "chap": 94, "isEnd": false, "entries": [{ "upvotes": 190, "time": "3 months", "group": "A&V STUDIO", "url": "https://files.catbox.moe/br57ql.cbz", "type": "CBZ" }] },
-      { "chap": 1, "isEnd": false, "entries": [{ "upvotes": 350, "time": "3 years", "group": "Timelessleaf", "url": "https://files.catbox.moe/br57ql.cbz", "type": "CBZ" }] }
+      { "chap": 96, "isEnd": true, "entries": [{ "upvotes": 0, "time": "1 month", "group": "A&V STUDIO", "url": "https://files.catbox.moe/br57ql.cbz", "type": "CBZ" }] },
+      { "chap": 95, "isEnd": false, "entries": [{ "upvotes": 0, "time": "2 months", "group": "A&V STUDIO", "url": "https://files.catbox.moe/br57ql.cbz", "type": "CBZ" }] },
+      { "chap": 94, "isEnd": false, "entries": [{ "upvotes": 0, "time": "3 months", "group": "A&V STUDIO", "url": "https://files.catbox.moe/br57ql.cbz", "type": "CBZ" }] },
+      { "chap": 1, "isEnd": false, "entries": [{ "upvotes": 0, "time": "3 years", "group": "Timelessleaf", "url": "https://files.catbox.moe/br57ql.cbz", "type": "CBZ" }] }
     ]
   },
   {
@@ -44,22 +44,22 @@
     "publicationStatus": "Ongoing",
     "translationStatus": "Ongoing",
     "rating": "9.9",
-    "ratingCount": "1",
+    "ratingCount": "0",
     "chapter": "Chap 5",
     "currentChapter": "Chap 5",
     "totalChapters": "5",
-    "documentUrl": "https://files.catbox.moe/21ajem.pdf",
+    "documentUrl": "CREATOR",
     "lastRead": "5m",
     "updated": "1h",
     "added": "1d",
-    "metrics": { "comments": 89, "likes": 512 },
+    "metrics": { "comments": 0, "likes": 0 },
     "description": "What happens when an ancient, unbroken devil entity crosses paths with a lone human carrying a hidden spark of immortality? The realms of mortals and gods begin to shatter as a historic blueprint unfolds.",
     "chapters": [
-      { "chap": 5, "isEnd": false, "entries": [{ "upvotes": 95, "time": "1 day", "group": "A&V STUDIO", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
-      { "chap": 4, "isEnd": false, "entries": [{ "upvotes": 80, "time": "3 days", "group": "A&V STUDIO", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
-      { "chap": 3, "isEnd": false, "entries": [{ "upvotes": 72, "time": "1 week", "group": "A&V STUDIO", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
-      { "chap": 2, "isEnd": false, "entries": [{ "upvotes": 60, "time": "2 weeks", "group": "A&V STUDIO", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
-      { "chap": 1, "isEnd": false, "entries": [{ "upvotes": 112, "time": "1 month", "group": "A&V STUDIO", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] }
+      { "chap": 5, "isEnd": false, "entries": [{ "upvotes": 0, "time": "1 day", "group": "A&V STUDIO", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
+      { "chap": 4, "isEnd": false, "entries": [{ "upvotes": 0, "time": "3 days", "group": "A&V STUDIO", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
+      { "chap": 3, "isEnd": false, "entries": [{ "upvotes": 0, "time": "1 week", "group": "A&V STUDIO", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
+      { "chap": 2, "isEnd": false, "entries": [{ "upvotes": 0, "time": "2 weeks", "group": "A&V STUDIO", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
+      { "chap": 1, "isEnd": false, "entries": [{ "upvotes": 0, "time": "1 month", "group": "A&V STUDIO", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] }
     ]
   },
   {
@@ -76,20 +76,20 @@
     "publicationStatus": "Ongoing",
     "translationStatus": "Completed",
     "rating": "9.5",
-    "ratingCount": "1",
+    "ratingCount": "0",
     "chapter": "Vol 1",
     "currentChapter": "Vol 1",
     "totalChapters": "50",
-    "documentUrl": "https://files.catbox.moe/21ajem.pdf",
+    "documentUrl": "CREATOR",
     "lastRead": "10m",
     "updated": "3h",
     "added": "2d",
-    "metrics": { "comments": 14, "likes": 42 },
+    "metrics": { "comments": 0, "likes": 0 },
     "description": "A warrior reborn into the same deadly loop 100 times seeks to break free. Each regression unlocks buried memories and hidden powers that reshape the battlefield — and destiny itself.",
     "chapters": [
-      { "chap": 50, "isEnd": false, "entries": [{ "upvotes": 55, "time": "1 week", "group": "AKV Novels", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
-      { "chap": 25, "isEnd": false, "entries": [{ "upvotes": 40, "time": "1 month", "group": "AKV Novels", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
-      { "chap": 1, "isEnd": false, "entries": [{ "upvotes": 88, "time": "2 months", "group": "AKV Novels", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] }
+      { "chap": 50, "isEnd": false, "entries": [{ "upvotes": 0, "time": "1 week", "group": "AKV Novels", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
+      { "chap": 25, "isEnd": false, "entries": [{ "upvotes": 0, "time": "1 month", "group": "AKV Novels", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] },
+      { "chap": 1, "isEnd": false, "entries": [{ "upvotes": 0, "time": "2 months", "group": "AKV Novels", "url": "https://files.catbox.moe/21ajem.pdf", "type": "PDF" }] }
     ]
   }
 ]
